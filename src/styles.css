@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Noto Sans SC', 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-rounded-title {
+    font-family: 'M PLUS Rounded 1c', sans-serif !important;
+    font-weight: 700;
+  }
+
+  .font-sans-body {
+    font-family: 'Noto Sans SC', 'Inter', sans-serif !important;
+  }
+
+  .text-wrap-safe {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite ease-in-out;
+}
